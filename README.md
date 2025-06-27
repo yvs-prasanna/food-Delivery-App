@@ -128,9 +128,7 @@ Download or clone the repo to get access to the file.
 3. Select the downloaded postman_collection.json file.
 4. Hit "Import".
 
-### 📚 API Documentation
-
-### Authentication Endpoints
+## 📚 API Documentation
 
 ### Register User
 ```http
