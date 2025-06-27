@@ -137,7 +137,7 @@ Download or clone the repo to get access to the file.
 POST /api/auth/register
 ```
 ### Request Body
-json```
+```json
 
 {
     "name": "John Doe",
@@ -152,7 +152,7 @@ json```
 POST /api/auth/login
 ```
 ### Request Body
-json```
+```json
 
 {
     "email": "john@example.com",
@@ -180,7 +180,7 @@ POST /api/cart/add
 Authorization: Bearer <token>
 ```
 ### Request Body
-json```
+```json
 
 {
     "restaurantId": 1,
@@ -204,7 +204,7 @@ POST /api/orders/create
 Authorization: Bearer <token>
 ```
 ### Request Body
-json```
+```json
 
 {
     "addressId": 1,
@@ -231,6 +231,9 @@ Authorization: Bearer <token>
 ```http
 POST /api/addresses
 Authorization: Bearer <token>
+```
+### Request Body
+```json
 
 {
     "type": "home",
