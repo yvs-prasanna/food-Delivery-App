@@ -139,8 +139,8 @@ The API will be available at `http://localhost:3000`
 ### 📫 API Testing with Postman
 To easily test all available API endpoints in this project, a Postman collection is included.
 
-### 🔽 Download the Collection
-### ✅ File: Food Delivery App.postman_collection.json
+🔽 Download the Collection
+✅ File: Food Delivery App.postman_collection.json
 
 Locate the file Food Delivery App.postman_collection.json in the root of this repository.  
 
