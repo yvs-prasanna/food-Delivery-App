@@ -68,8 +68,7 @@ food-delivery-backend/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd food-delivery-backend
+   git clone https://github.com/yvs-prasanna/food-Delivery-App.git
    ```
 
 2. **Install dependencies**
@@ -137,14 +136,6 @@ The API will be available at `http://localhost:3000`
 - **Location-based** restaurant filtering using Haversine formula
 - **Rating system** for restaurants with automatic calculation
 
-## 🔐 Authentication
-
-The API uses JWT (JSON Web Tokens) for authentication. Include the token in the Authorization header:
-
-```
-Authorization: Bearer <your-jwt-token>
-```
-
 ## 📚 API Documentation
 
 ### Authentication Endpoints
@@ -152,7 +143,6 @@ Authorization: Bearer <your-jwt-token>
 #### Register User
 ```http
 POST /api/auth/register
-Content-Type: application/json
 
 {
     "name": "John Doe",
@@ -165,7 +155,6 @@ Content-Type: application/json
 #### Login User
 ```http
 POST /api/auth/login
-Content-Type: application/json
 
 {
     "email": "john@example.com",
@@ -191,7 +180,6 @@ GET /api/restaurants/1
 ```http
 POST /api/cart/add
 Authorization: Bearer <token>
-Content-Type: application/json
 
 {
     "restaurantId": 1,
@@ -213,7 +201,6 @@ Authorization: Bearer <token>
 ```http
 POST /api/orders/create
 Authorization: Bearer <token>
-Content-Type: application/json
 
 {
     "addressId": 1,
@@ -240,7 +227,6 @@ Authorization: Bearer <token>
 ```http
 POST /api/addresses
 Authorization: Bearer <token>
-Content-Type: application/json
 
 {
     "type": "home",
@@ -260,7 +246,6 @@ Content-Type: application/json
 ```http
 POST /api/reviews/restaurant
 Authorization: Bearer <token>
-Content-Type: application/json
 
 {
     "orderId": "ORD123456",
