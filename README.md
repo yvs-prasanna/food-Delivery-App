@@ -225,6 +225,28 @@ GET /api/cart
 Authorization: Bearer <token>
 ```
 
+### ✅ Update Item Quantity
+```http
+PUT /api/cart/update/:itemId
+```
+
+#### Request Body
+```json
+{
+  "quantity": 2
+}
+```
+
+### ✅ Remove Item from Cart
+```http
+DELETE /api/cart/remove/:itemId
+```
+
+### ✅ Clear the Cart
+```http
+DELETE /api/cart/clear
+```
+
 ### Order Endpoints
 
 #### Create Order
