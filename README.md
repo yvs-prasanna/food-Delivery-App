@@ -116,7 +116,7 @@ To easily test all available API endpoints in this project, a Postman collection
 
 🔽 Download the Collection
 
-✅ File: Food Delivery App.postman_collection.json
+#### ✅ File: Food Delivery App.postman_collection.json
 
 Locate the file Food Delivery App.postman_collection.json in the root of this repository.  
 
@@ -128,15 +128,15 @@ Download or clone the repo to get access to the file.
 3. Select the downloaded postman_collection.json file.
 4. Hit "Import".
 
-## 📚 API Documentation
+### 📚 API Documentation
 
 ### Authentication Endpoints
 
-#### Register User
+### Register User
 ```http
 POST /api/auth/register
 ```
-### Request Body
+#### Request Body
 ```json
 
 {
@@ -147,11 +147,11 @@ POST /api/auth/register
 }
 ```
 
-#### Login User
+### Login User
 ```http
 POST /api/auth/login
 ```
-### Request Body
+#### Request Body
 ```json
 
 {
