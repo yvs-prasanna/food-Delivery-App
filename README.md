@@ -136,6 +136,22 @@ The API will be available at `http://localhost:3000`
 - **Location-based** restaurant filtering using Haversine formula
 - **Rating system** for restaurants with automatic calculation
 
+### 📫 API Testing with Postman
+To easily test all available API endpoints in this project, a Postman collection is included.
+
+### 🔽 Download the Collection
+### ✅ File: Food Delivery App.postman_collection.json
+
+Locate the file Food Delivery App.postman_collection.json in the root of this repository.  
+
+Download or clone the repo to get access to the file.
+
+### 📥 Import into Postman
+1. Open Postman.
+2. Click on "Import" in the top-left corner.
+3. Select the downloaded postman_collection.json file.
+4. Hit "Import".
+
 ## 📚 API Documentation
 
 ### Authentication Endpoints
@@ -255,13 +271,6 @@ Authorization: Bearer <token>
     "comment": "Great food, timely delivery!"
 }
 ```
-
-## 🧪 Testing
-
-Test the API using tools like:
-- **Postman** - Import the collection for easy testing.....
-  Post man Collection is provided in the code
-  ### Food Delivery App.postman_collection.json
 
 ### Sample Test Workflow
 
