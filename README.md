@@ -191,24 +191,24 @@ PUT /api/addresses/:id/set-default
 
 ### Restaurant Endpoints
 
-#### Get Nearby Restaurants
+### Get Nearby Restaurants
 ```http
 GET /api/restaurants?lat=19.0760&lng=72.8777&radius=10&cuisine=Italian&search=pizza&veg_only=true&rating=4
 ```
 
-#### Get Restaurant Details
+### Get Restaurant Details
 ```http
 GET /api/restaurants/1
 ```
 
 ### Cart Endpoints
 
-#### Add Item to Cart
+### Add Item to Cart
 ```http
 POST /api/cart/add
 Authorization: Bearer <token>
 ```
-### Request Body
+#### Request Body
 ```json
 
 {
@@ -219,7 +219,7 @@ Authorization: Bearer <token>
 }
 ```
 
-#### Get Cart
+### Get Cart
 ```http
 GET /api/cart
 Authorization: Bearer <token>
