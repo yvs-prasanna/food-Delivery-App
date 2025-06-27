@@ -274,7 +274,7 @@ Content-Type: application/json
 ## 🧪 Testing
 
 Test the API using tools like:
-- **Postman** - Import the collection for easy testing
+- **Postman** - Import the collection for easy testing.....
   Post man Collection is provided in the code
   ### Food Delivery App.postman_collection.json
 
