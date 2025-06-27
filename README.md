@@ -109,32 +109,7 @@ food-delivery-backend/
 
 The API will be available at `http://localhost:3000`
 
-## 🗄️ Database Design
 
-### Key Entities
-
-1. **Users** - Customer information and authentication
-2. **Addresses** - Multiple delivery addresses per user
-3. **Restaurants** - Restaurant details and location
-4. **Menu Categories** - Grouping of menu items
-5. **Menu Items** - Food items with pricing and details
-6. **Cart Items** - User's cart with selected items
-7. **Orders** - Order information and status
-8. **Order Items** - Individual items in an order
-9. **Delivery Partners** - Delivery personnel information
-10. **Order Tracking** - Status updates for orders
-11. **Payments** - Payment transactions
-12. **Reviews** - Restaurant and delivery ratings
-
-### Design Decisions
-
-- **SQLite** for simplicity and easy deployment
-- **JWT tokens** for stateless authentication
-- **Cart persistence** across sessions
-- **Order status tracking** with timestamps
-- **Price storage** at time of order to handle price changes
-- **Location-based** restaurant filtering using Haversine formula
-- **Rating system** for restaurants with automatic calculation
 
 ### 📫 API Testing with Postman
 To easily test all available API endpoints in this project, a Postman collection is included.
