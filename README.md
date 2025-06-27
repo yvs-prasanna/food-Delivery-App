@@ -160,6 +160,37 @@ POST /api/auth/login
 }
 ```
 
+### 🏠 Address
+
+## ✅ Add Delivery Address
+
+```http
+POST /api/addresses
+```
+## Request Body
+```json
+{
+  "type": "home",
+  "addressLine1": "123 Main Street",
+  "addressLine2": "Apt 4B",
+  "city": "Mumbai",
+  "state": "Maharashtra",
+  "pincode": "400001",
+  "latitude": 19.0760,
+  "longitude": 72.8777
+}
+```
+
+## ✅ Get User Addresses
+```http
+GET /api/addresses
+```
+
+## ✅ Set Default Address
+```http
+PUT /api/addresses/:id/set-default
+```
+
 ### Restaurant Endpoints
 
 #### Get Nearby Restaurants
