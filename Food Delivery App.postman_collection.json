@@ -1,0 +1,724 @@
+{
+	"info": {
+		"_postman_id": "45b15412-b5eb-422a-bf62-c449e3d48fd4",
+		"name": "Food Delivery App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38820211"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register API",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ODIsImVtYWlsIjoiZGVubmlzQGdtYWlsLmNvbSIsIm5hbWUiOiJkZW5uaXMiLCJpYXQiOjE3NTA5MzA2MzUsImV4cCI6MTc1MDkzNDIzNX0.1WTkwthGju-GOD3SikzOa2yWsP5MY91hwJ-oZfrbdKk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"user1\",\r\n    \"password\" : \"123456\",\r\n    \"email\" : \"user1@gmai.com\",\r\n    \"phone\" : \"9764565454\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user1@gmai.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Add Delivery Address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"home\",\r\n    \"addressLine1\": \"123 Main Street\",\r\n    \"addressLine2\": \"Apt 4B\",\r\n    \"city\": \"Mumbai\",\r\n    \"state\": \"Maharashtra\",\r\n    \"pincode\": \"400001\",\r\n    \"latitude\": 19.0760,\r\n    \"longitude\": 72.8777\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users Addresses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"home\",\r\n    \"addressLine1\": \"123 Main Street\",\r\n    \"addressLine2\": \"Apt 4B\",\r\n    \"city\": \"Mumbai\",\r\n    \"state\": \"Maharashtra\",\r\n    \"pincode\": \"400001\",\r\n    \"latitude\": 19.0760,\r\n    \"longitude\": 72.8777\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set default Address",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/addresses/4/set-default",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"addresses",
+								"4",
+								"set-default"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "Get Near by Restaurents",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"home\",\r\n    \"addressLine1\": \"123 Main Street\",\r\n    \"addressLine2\": \"Apt 4B\",\r\n    \"city\": \"Mumbai\",\r\n    \"state\": \"Maharashtra\",\r\n    \"pincode\": \"400001\",\r\n    \"latitude\": 19.0760,\r\n    \"longitude\": 72.8777\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/restaurants?lat=19.0760&lng=72.8777",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"restaurants"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "19.0760"
+								},
+								{
+									"key": "lng",
+									"value": "72.8777"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Resstaurant By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/restaurants/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"restaurants",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add Item to cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"restaurantId\": 1,\r\n    \"itemId\": 2,\r\n    \"quantity\": 2,\r\n    \"specialInstructions\": \"Extra cheese please\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cart/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User's cart",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Item Quantity in cart",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\" : 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cart/update/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Item from cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cart/remove/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								"remove",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clear the Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/cart/clear",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"cart",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Place an Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressId\": 2,\r\n    \"paymentMethod\": \"cash\",\r\n    \"specialInstructions\": \"Please call before delivery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/orders/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User order history",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressId\": 2,\r\n    \"paymentMethod\": \"cash\",\r\n    \"specialInstructions\": \"Please call before delivery\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Order Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressId\": 2,\r\n    \"paymentMethod\": \"cash\",\r\n    \"specialInstructions\": \"Please call before delivery\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/orders/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"addressId\": 2,\r\n    \"paymentMethod\": \"cash\",\r\n    \"specialInstructions\": \"Please call before delivery\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/orders/1/cancel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"orders",
+								"1",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Payment Process",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"ORD123456\",\r\n    \"paymentMethod\": \"card\",\r\n    \"paymentDetails\": {\r\n        \"cardNumber\": \"4111111111111111\",\r\n        \"expiryMonth\": \"12\",\r\n        \"expiryYear\": \"2025\",\r\n        \"cvv\": \"123\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/payment/process",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"payment",
+								"process"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Review Restaurant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"ORD123456\",\r\n    \"restaurantRating\": 4,\r\n    \"foodRating\": 5,\r\n    \"deliveryRating\": 4,\r\n    \"comment\": \"Great food, timely delivery!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/reviews/restaurant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reviews",
+								"restaurant"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Restaurant reviews",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"ORD123456\",\r\n    \"restaurantRating\": 4,\r\n    \"foodRating\": 5,\r\n    \"deliveryRating\": 4,\r\n    \"comment\": \"Great food, timely delivery!\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/reviews/restaurant/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reviews",
+								"restaurant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Global Search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJ1c2VyMUBnbWFpLmNvbSIsIm5hbWUiOiJ1c2VyMSIsImlhdCI6MTc1MDkzOTM4OCwiZXhwIjoxNzUxNTQ0MTg4fQ.8h7FMjt0QA9bkxexHE_ozTXPaX_eqozGWpBUAvcIKf4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"ORD123456\",\r\n    \"restaurantRating\": 4,\r\n    \"foodRating\": 5,\r\n    \"deliveryRating\": 4,\r\n    \"comment\": \"Great food, timely delivery!\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/restaurants/search?query=pizza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"restaurants",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "pizza"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

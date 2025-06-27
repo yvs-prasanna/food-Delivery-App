@@ -3,7 +3,7 @@ const { hashPassword, comparePassword, generateToken, formatResponse, formatErro
 const { HTTP_STATUS } = require('../utils/constants');
 
 class AuthController {
-    // Register new user
+    
     async register(req, res) {
         try {
             const { name, email, password, phone } = req.body;
