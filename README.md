@@ -275,8 +275,8 @@ Content-Type: application/json
 
 Test the API using tools like:
 - **Postman** - Import the collection for easy testing
-- **curl** - Command line testing
-- **HTTPie** - User-friendly HTTP client
+  Post man Collection is provided in the code
+  ### Food Delivery App.postman_collection.json
 
 ### Sample Test Workflow
 
