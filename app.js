@@ -6,21 +6,18 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 
 // Import routes
-const authRoutes = require('./routes/authRoutes');
-const addressRoutes = require('./routes/addressRoutes');
-const restaurantRoutes = require('./routes/restaurantRoutes');
-const cartRoutes = require('./routes/cartRoutes');
-const orderRoutes = require('./routes/orderRoutes');
-const reviewRoutes = require('./routes/reviewRoutes');
-const paymentRoutes = require('./routes/paymentRoutes');
+const authRoutes = require('./src/routes/authRoutes');
+const addressRoutes = require('./src/routes/addressRoutes');
+const restaurantRoutes = require('./src/routes/restaurantRoutes');
+const cartRoutes = require('./src/routes/cartRoutes');
+const orderRoutes = require('./src/routes/orderRoutes');
+const reviewRoutes = require('./src/routes/reviewRoutes');
+const paymentRoutes = require('./src/routes/paymentRoutes');
 
 // Import middleware
-const errorHandler = require('./middleware/errorHandler');
+const errorHandler = require('./src/middleware/errorHandler');
 
 const app = express();
-
-// Security middleware
-app.use(helmet());
 
 // CORS configuration
 app.use(cors({
@@ -49,15 +46,6 @@ if (process.env.NODE_ENV !== 'test') {
     app.use(morgan('combined'));
 }
 
-// Health check endpoint
-app.get('/health', (req, res) => {
-    res.json({
-        success: true,
-        message: 'Food Delivery API is running',
-        timestamp: new Date().toISOString(),
-        version: '1.0.0'
-    });
-});
 
 // API routes
 const apiPrefix = process.env.API_PREFIX || '/api';
@@ -88,9 +76,6 @@ const PORT = process.env.PORT || 3000;
 if (process.env.NODE_ENV !== 'test') {
     app.listen(PORT, () => {
         console.log(`🚀 Food Delivery API server is running on port ${PORT}`);
-        console.log(`📖 Health check: http://localhost:${PORT}/health`);
-        console.log(`🔗 API base URL: http://localhost:${PORT}${apiPrefix}`);
-        console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
     });
 }
 

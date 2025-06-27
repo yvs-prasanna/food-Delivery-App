@@ -4,8 +4,8 @@
   "description": "Complete backend API for food delivery platform",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
     "setup": "node database/setup.js",
     "seed": "node database/seed.js",
     "test": "jest"

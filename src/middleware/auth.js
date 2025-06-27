@@ -10,7 +10,7 @@ const authMiddleware = (req, res, next) => {
             return res.status(statusCode).json(response);
         }
         
-        const token = authHeader.substring(7); // Remove 'Bearer ' prefix
+        const token = authHeader.substring(7); 
         
         const decoded = verifyToken(token);
         req.user = decoded;
