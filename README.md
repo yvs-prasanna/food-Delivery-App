@@ -253,6 +253,9 @@ Authorization: Bearer <token>
 ```http
 POST /api/reviews/restaurant
 Authorization: Bearer <token>
+```
+### Request Body
+```json
 
 {
     "orderId": "ORD123456",
