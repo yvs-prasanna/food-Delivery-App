@@ -160,14 +160,14 @@ POST /api/auth/login
 }
 ```
 
-### 🏠 Address
+## 🏠 Address
 
-## ✅ Add Delivery Address
+### ✅ Add Delivery Address
 
 ```http
 POST /api/addresses
 ```
-## Request Body
+#### Request Body
 ```json
 {
   "type": "home",
@@ -181,12 +181,12 @@ POST /api/addresses
 }
 ```
 
-## ✅ Get User Addresses
+### ✅ Get User Addresses
 ```http
 GET /api/addresses
 ```
 
-## ✅ Set Default Address
+### ✅ Set Default Address
 ```http
 PUT /api/addresses/:id/set-default
 ```
