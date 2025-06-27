@@ -135,6 +135,9 @@ Download or clone the repo to get access to the file.
 #### Register User
 ```http
 POST /api/auth/register
+```
+### Request Body
+json```
 
 {
     "name": "John Doe",
@@ -147,6 +150,9 @@ POST /api/auth/register
 #### Login User
 ```http
 POST /api/auth/login
+```
+### Request Body
+json```
 
 {
     "email": "john@example.com",
@@ -172,6 +178,9 @@ GET /api/restaurants/1
 ```http
 POST /api/cart/add
 Authorization: Bearer <token>
+```
+### Request Body
+json```
 
 {
     "restaurantId": 1,
@@ -193,6 +202,9 @@ Authorization: Bearer <token>
 ```http
 POST /api/orders/create
 Authorization: Bearer <token>
+```
+### Request Body
+json```
 
 {
     "addressId": 1,
