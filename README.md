@@ -189,21 +189,21 @@ GET /api/addresses
 PUT /api/addresses/:id/set-default
 ```
 
-## Restaurant Endpoints
+## 🍽️Restaurant Endpoints
 
-### Get Nearby Restaurants
+### ✅Get Nearby Restaurants
 ```http
 GET /api/restaurants?lat=19.0760&lng=72.8777&radius=10&cuisine=Italian&search=pizza&veg_only=true&rating=4
 ```
 
-### Get Restaurant Details
+### ✅Get Restaurant Details
 ```http
 GET /api/restaurants/1
 ```
 
-## Cart Endpoints
+## 🛒Cart Endpoints
 
-### Add Item to Cart
+### ✅Add Item to Cart
 ```http
 POST /api/cart/add
 Authorization: Bearer <token>
@@ -219,13 +219,13 @@ Authorization: Bearer <token>
 }
 ```
 
-### Get Cart
+### ✅Get Cart
 ```http
 GET /api/cart
 Authorization: Bearer <token>
 ```
 
-### ✅ Update Item Quantity
+### ✅Update Item Quantity
 ```http
 PUT /api/cart/update/:itemId
 ```
@@ -246,9 +246,9 @@ DELETE /api/cart/remove/:itemId
 DELETE /api/cart/clear
 ```
 
-## Order Endpoints
+## 📦Order Endpoints
 
-### Create Order
+### ✅Create Order
 ```http
 POST /api/orders/create
 Authorization: Bearer <token>
@@ -263,43 +263,40 @@ Authorization: Bearer <token>
 }
 ```
 
-### Get Order History
+### ✅Get Order History
 ```http
 GET /api/orders
 Authorization: Bearer <token>
 ```
 
-### Get Order Details
+### ✅Get Order Details
 ```http
 GET /api/orders/ORD123456
 Authorization: Bearer <token>
 ```
+## 💳 Payment
 
-## Address Endpoints
-
-### Add Address
+### ✅ Payment Process
 ```http
-POST /api/addresses
-Authorization: Bearer <token>
+POST /api/payment/process
 ```
 #### Request Body
 ```json
-
 {
-    "type": "home",
-    "addressLine1": "123 Main Street",
-    "addressLine2": "Apt 4B",
-    "city": "Mumbai",
-    "state": "Maharashtra",
-    "pincode": "400001",
-    "latitude": 19.0760,
-    "longitude": 72.8777
+    "orderId": "ORD123456",
+    "paymentMethod": "card",
+    "paymentDetails": {
+        "cardNumber": "4111111111111111",
+        "expiryMonth": "12",
+        "expiryYear": "2025",
+        "cvv": "123"
+    }
 }
 ```
 
-## Review Endpoints
+## ⭐Review Endpoints
 
-### Add Review
+### ✅Add Review
 ```http
 POST /api/reviews/restaurant
 Authorization: Bearer <token>
@@ -308,12 +305,24 @@ Authorization: Bearer <token>
 ```json
 
 {
-    "orderId": "ORD123456",
-    "restaurantRating": 4,
-    "foodRating": 5,
-    "deliveryRating": 4,
-    "comment": "Great food, timely delivery!"
+  "orderId": "ORD123456",
+  "restaurantRating": 4,
+  "foodRating": 5,
+  "deliveryRating": 4,
+  "comment": "Great food, timely delivery!"
 }
+```
+
+### ✅Get Restaurant Review
+```http
+GET /api/reviews/restaurant/:restaurantId
+```
+
+## 🔍 Search
+
+### ✅Global Search
+```http
+GET /api/restaurants/search?query=pizza
 ```
 
 ### Sample Test Workflow
