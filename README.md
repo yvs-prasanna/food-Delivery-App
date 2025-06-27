@@ -189,7 +189,7 @@ GET /api/addresses
 PUT /api/addresses/:id/set-default
 ```
 
-### Restaurant Endpoints
+## Restaurant Endpoints
 
 ### Get Nearby Restaurants
 ```http
@@ -201,7 +201,7 @@ GET /api/restaurants?lat=19.0760&lng=72.8777&radius=10&cuisine=Italian&search=pi
 GET /api/restaurants/1
 ```
 
-### Cart Endpoints
+## Cart Endpoints
 
 ### Add Item to Cart
 ```http
@@ -229,7 +229,6 @@ Authorization: Bearer <token>
 ```http
 PUT /api/cart/update/:itemId
 ```
-
 #### Request Body
 ```json
 {
@@ -247,14 +246,14 @@ DELETE /api/cart/remove/:itemId
 DELETE /api/cart/clear
 ```
 
-### Order Endpoints
+## Order Endpoints
 
-#### Create Order
+### Create Order
 ```http
 POST /api/orders/create
 Authorization: Bearer <token>
 ```
-### Request Body
+#### Request Body
 ```json
 
 {
@@ -264,26 +263,26 @@ Authorization: Bearer <token>
 }
 ```
 
-#### Get Order History
+### Get Order History
 ```http
 GET /api/orders
 Authorization: Bearer <token>
 ```
 
-#### Get Order Details
+### Get Order Details
 ```http
 GET /api/orders/ORD123456
 Authorization: Bearer <token>
 ```
 
-### Address Endpoints
+## Address Endpoints
 
-#### Add Address
+### Add Address
 ```http
 POST /api/addresses
 Authorization: Bearer <token>
 ```
-### Request Body
+#### Request Body
 ```json
 
 {
@@ -298,14 +297,14 @@ Authorization: Bearer <token>
 }
 ```
 
-### Review Endpoints
+## Review Endpoints
 
-#### Add Review
+### Add Review
 ```http
 POST /api/reviews/restaurant
 Authorization: Bearer <token>
 ```
-### Request Body
+#### Request Body
 ```json
 
 {
